@@ -8,12 +8,13 @@
     <img src="./assets/img/nyebe_white.png" alt="Nyebe" width="130" height="100">
   </a>
 <!-- * Title Section -->
-  <h3 align="center">AD - CI4 Template</h3>
+  <h3 align="center">AD - CI4 Capapas Miltank Tea Shop</h3>
 </div>
 
 <!-- * Description Section -->
 <div align="center">
-Hello This is my Milktea shop repository :DDD
+  Hello This is my Milktea shop repository :DDD
+  INSPIRED BY MILTANK FROM POKEMON
 </div>
 
 <br/>
@@ -103,7 +104,7 @@ These are **sample modules** included (or suggested) for learning how to add fea
 Run the development stack and the app (rebuild if needed):
 
 ```cmd
-docker compose up --watch
+docker compose up -d --build
 ```
 
 Common utility commands (run inside the project root):
