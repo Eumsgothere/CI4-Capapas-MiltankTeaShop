@@ -13,8 +13,7 @@
 
 <!-- * Description Section -->
 <div align="center">
-This repository is a beginner-friendly CodeIgniter 4 template.  
-It helps teams quickly bootstrap backend + frontend projects, with simple sample modules that show how to extend the system.
+Hello This is my Milktea shop repository :DDD
 </div>
 
 <br/>
