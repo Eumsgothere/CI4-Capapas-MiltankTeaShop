@@ -93,6 +93,7 @@
   <p style="text-align: center;">
     At Miltank Tea Shop, we serve happiness in a cup.
     From creamy classics to fruity flavors, our drinks are crafted to brighten your day!
+    Visit us and discover your new favorite tea or introduce you to your new favorite Pokemon!!
   </p>
 </section>
 
@@ -100,17 +101,17 @@
   <h2>Best Sellers</h2>
   <div class="best-sellers">
     <div class="card">
-      <img src="https://cdn-icons-png.flaticon.com/512/415/415733.png" alt="Classic Pearl Milk Tea">
+      <img src="https://assets.epicurious.com/photos/629f98926e3960ec24778116/1:1/w_2560%2Cc_limit/BubbleTea_RECIPE_052522_34811.jpg" alt="Classic Pearl Milk Tea">
       <h3>Classic Pearl Milk Tea</h3>
       <p>Rich black tea, creamy milk, and chewy pearls.</p>
     </div>
     <div class="card">
-      <img src="https://cdn-icons-png.flaticon.com/512/415/415734.png" alt="Strawberry Milk Tea">
+      <img src="https://www.inkatrinaskitchen.com/wp-content/uploads/2020/05/Strawberry-Bubble-Tea-24-wm-600-500x500.jpg" alt="Strawberry Milk Tea">
       <h3>Strawberry Milk Tea</h3>
       <p>Refreshing pink tea with real strawberry flavor.</p>
     </div>
     <div class="card">
-      <img src="https://cdn-icons-png.flaticon.com/512/415/415735.png" alt="Matcha Latte">
+      <img src="https://feelgoodfoodie.net/wp-content/uploads/2023/08/Matcha-Latte-TIMG.jpg" alt="Matcha Latte">
       <h3>Matcha Latte</h3>
       <p>Earthy matcha balanced with creamy sweetness.</p>
     </div>
