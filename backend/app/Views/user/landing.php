@@ -6,6 +6,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Miltank Tea Shop</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Lilita+One&display=swap" rel="stylesheet">
+
   <style>
     * {
       margin: 0;
@@ -31,9 +33,21 @@
     }
 
     header h1 {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
       font-size: 1.6rem;
       color: #2f2f2f;
-    }
+      font-family: 'Lilita One', cursive;
+      margin: 0;
+}
+
+.logo-inline {
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
 
     nav a {
       text-decoration: none;
@@ -164,7 +178,7 @@
 <body>
 
  <header>
-    <h1>🐄 Miltank Tea Shop</h1>
+    <h1><img src="https://media.discordapp.net/attachments/810746996457603123/1420623080392364082/MILTANKTEAcir.png?ex=68d611d8&is=68d4c058&hm=c74f56984c57a47a6216299ff4b2b21957292755bbff10ad81858db761efa98f&=&format=webp&quality=lossless" alt="Miltank Logo" class="logo-inline"> Miltank Tea Shop</h1>
     <nav>
     <a href="/login">Login</a>
     <a href="/moodboard">Mood Board</a>
