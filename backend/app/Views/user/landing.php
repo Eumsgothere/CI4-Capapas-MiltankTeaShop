@@ -163,15 +163,14 @@
 </head>
 <body>
 
-<header>
-  <h1>Miltank Tea Shop</h1>
-  <nav>
-    <a href="login.php">Login</a>
-    <a href="signup.php">Sign Up</a>
-    <a href="moodboard.php">Mood Board</a>
-    <a href="roadmap.php">Road Map</a>
-  </nav>
-</header>
+ <header>
+    <h1>🐄 Miltank Tea Shop</h1>
+    <nav>
+    <a href="/login">Login</a>
+    <a href="/moodboard">Mood Board</a>
+    <a href="/roadmap">Road Map</a>
+    </nav>
+  </header>
 
 <section class="hero">
   <h2>🧋 Refreshing Happiness in Every Sip 🧋</h2>
