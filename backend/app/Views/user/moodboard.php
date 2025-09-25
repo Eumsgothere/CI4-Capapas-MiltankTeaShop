@@ -170,10 +170,9 @@
     <h1>🐄 Miltank Moodboard</h1>
     <p>Official Brand Guide for Colors, Buttons, Typography & UI Elements</p>
     <nav>
-      <a href="landing.php">Home</a>
-      <a href="login.php">Login</a>
-      <a href="signup.php">Sign Up</a>
-      <a href="roadmap.php">Road Map</a>
+         <a href="/">Home</a>
+         <a href="/login">Log in</a>
+         <a href="/roadmap">Road Map</a>
     </nav>
   </header>
 
