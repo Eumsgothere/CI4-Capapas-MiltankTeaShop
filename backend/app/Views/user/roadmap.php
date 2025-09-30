@@ -1,217 +1,315 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Miltank Roadmap</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Lilita+One&display=swap" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Miltank — Road Map</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Lilita+One&display=swap" rel="stylesheet">
 
   <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: #fcebb7;
-      color: #2f2f2f;
+    * {
+      box-sizing: border-box;
       margin: 0;
-      padding: 0;
+      padding: 0
+    }
+
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+      background: #fcebb7;
+      color: #2f2f2f
     }
 
     header {
       background: #f6b6c4;
-      color: ;
-      padding: 1rem;
-      text-align: center;
+      color: #2f2f2f;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
 
-    header h1 { 
-         display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.6rem;
-  font-size: 2rem;
-  color: #2f2f2f;
-    font-family: 'Lilita One', cursive;
-}
+    header h1 {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 1.6rem;
+      font-family: 'Lilita One', cursive;
+      margin: 0;
+    }
 
-.logo-inline {
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-  object-fit: cover;
-}
+    .logo {
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
 
     nav a {
-      display: inline-block;
-      margin: 0.2rem;
-      padding: 0.5rem 1rem;
-      background: #4a90e2;
-      color: #fff;
       text-decoration: none;
-      font-weight: bold;
+      background: #4a90e2;
+      color: #ffffff;
+      padding: 0.5rem 1rem;
       border-radius: 6px;
-      transition: 0.2s;
+      margin: 0 0.3rem;
+      font-weight: 500;
+      transition: all 0.2s ease-in-out;
     }
 
-    nav a:hover { background: #2f2f2f; }
-
-    .container {
-      max-width: 900px;
-      margin: 2rem auto;
-      padding: 0 1rem;
+    nav a:hover {
+      background: #2f2f2f;
     }
 
-    h2 {
-      margin: 2rem 0 1rem;
-      font-size: 1.4rem;
-      font-weight: 600;
-      border-bottom: 2px solid #ddd;
-      padding-bottom: 0.3rem;
+    .page-title {
+      text-align: center;
+      padding: 1rem 0;
+    }
+
+    .page-title h2 {
+      font-family: 'Lilita One', cursive;
+      font-size: 3.5rem;
+      color: #2f2f2f;
+      margin: 0;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 28px auto;
+      padding: 0 16px
+    }
+
+    .timeline {
+      position: relative;
+      padding: 8px 0 48px
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: #e6e2e2;
+      transform: translateX(-50%);
+      border-radius: 2px
+    }
+
+    .item {
+      position: relative;
+      margin: 28px 0
+    }
+
+    .dot {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 10px;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: #f6b6c4;
+      border: 4px solid #fcebb7;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      color: #2f2f2f;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.06);
+      z-index: 2
     }
 
     .card {
+      width: 45%;
       background: #fff;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      padding: 1rem 1.5rem;
-      margin-bottom: 1rem;
-      position: relative;
+      padding: 16px;
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06)
     }
 
-    .card h3 {
-      margin: 0 0 0.3rem;
-      font-weight: 600;
+    .left .card {
+      margin-right: auto
     }
 
-    .card p {
-      margin: 0.3rem 0;
-      font-size: 0.95rem;
-      color: #555;
+    .right .card {
+      margin-left: auto
+    }
+
+    .title {
+      font-weight: 700;
+      color: #2f2f2f;
+      margin-bottom: 6px
+    }
+
+    .desc {
+      color: #444;
+      font-size: 14px
     }
 
     .status {
-      position: absolute;
-      top: 1rem;
-      right: 1rem;
-      padding: 0.3rem 0.7rem;
+      display: inline-block;
+      margin-top: 10px;
+      padding: 6px 10px;
       border-radius: 12px;
-      font-size: 0.8rem;
-      font-weight: bold;
       color: #fff;
+      font-weight: 700;
+      font-size: 13px
     }
 
-    .inprogress { background: #4caf50; }
-    .planned { background: #2196f3; }
-    .backlog { background: #9e9e9e; }
-    .done { background: #673ab7; }
+    .done {
+      background: #673ab7
+    }
 
-    .date {
-      display: inline-block;
-      margin-top: 0.5rem;
-      padding: 0.3rem 0.7rem;
-      font-size: 0.8rem;
-      font-weight: 600;
-      background: #f6b6c4;
-      color: #2f2f2f;
-      border-radius: 20px;
+    .backlog {
+      background: #9e9e9e
     }
 
     footer {
       background: #2f2f2f;
       color: #fff;
+      padding: 16px;
       text-align: center;
-      padding: 1rem;
-      margin-top: 3rem;
+      margin-top: 32px
     }
+
     footer a {
       color: #f6b6c4;
-      margin: 0 10px;
       text-decoration: none;
+      margin: 0 8px;
+      font-weight: 600
+    }
+
+    @media (max-width:760px) {
+      .timeline::before {
+        left: 28px;
+        transform: none
+      }
+
+      .dot {
+        left: 28px;
+        transform: none;
+        top: 0
+      }
+
+      .card {
+        width: 100%;
+        margin-left: 44px;
+        margin-right: 16px
+      }
+
+      .left .card,
+      .right .card {
+        margin: 0 0 0 44px
+      }
     }
   </style>
 </head>
+
 <body>
 
-<header>
- <h1>
-    <img src="https://media.discordapp.net/attachments/810746996457603123/1420623080392364082/MILTANKTEAcir.png?ex=68d611d8&is=68d4c058&hm=c74f56984c57a47a6216299ff4b2b21957292755bbff10ad81858db761efa98f&=&format=webp&quality=lossless" 
-         alt="Miltank Logo" class="logo-inline">
-    Miltank Tea Shop
-  </h1>
-  <nav>
-    <a href="/">Home</a>
-    <a href="/login">Login</a>
-    <a href="/moodboard">Mood Board</a>
-  </nav>
-</header>
+  <header>
+    <h1>
+      <img src="/1758800584.685317-nobg.png" alt="logo" class="logo">
+      Miltank Tea Shop
+    </h1>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/moodboard">Mood Board</a>
+      <a href="/login">Log in</a>
+    </nav>
+  </header>
 
-<div class="container">
-  <h2>Completed</h2>
-  <div class="card">
-    <h3>Setup Environment</h3>
-    <p>Prepare project files, configure environment, and initialize version control.</p>
-    <span class="date">Sept 15, 2025</span>
-    <span class="status done">Done</span>
+  <div class="page-title">
+    <h2>Road Map</h2>
   </div>
 
-  <div class="card">
-    <h3>Landing Page</h3>
-    <p>Design and build the main landing page for the project.</p>
-    <span class="date">Sept 15, 2025</span>
-    <span class="status done">Done</span>
-  </div>
+  <main>
+    <div class="timeline" role="list">
 
-  <div class="card">
-    <h3>Login & Sign Up</h3>
-    <p>Create authentication pages for users.</p>
-    <span class="date">Sept 24, 2025</span>
-    <span class="status done">Done</span>
-  </div>
+      <div class="left item" role="listitem">
+        <div class="dot">2025</div>
+        <div class="card">
+          <div class="title">Setup Environment</div>
+          <div class="desc">Prepare project files, configure the environment, and initialize version control.</div>
+          <div class="status done">Done</div>
+        </div>
+      </div>
 
-  <div class="card">
-    <h3>Mood Board</h3>
-    <p>Showcase project colors, typography, buttons, cards, and logos.</p>
-    <span class="date">Sept 24, 2025</span>
-    <span class="status done">Done</span>
-  </div>
+      <div class="right item" role="listitem">
+        <div class="dot">2025</div>
+        <div class="card">
+          <div class="title">Landing Page</div>
+          <div class="desc">Design and build the main landing page for the project.</div>
+          <div class="status done">Done</div>
+        </div>
+      </div>
 
-  <div class="card">
-    <h3>Roadmap Page</h3>
-    <p>Outline the development flow with milestones.</p>
-    <span class="date">Sept 24, 2025</span>
-    <span class="status done">Done</span>
-  </div>
+      <div class="left item" role="listitem">
+        <div class="dot">2025</div>
+        <div class="card">
+          <div class="title">Login &amp; Sign Up</div>
+          <div class="desc">Create authentication pages for users (login and signup).</div>
+          <div class="status done">Done</div>
+        </div>
+      </div>
 
-  <h2>Backlog</h2>
-  <div class="card">
-    <h3>Componentization</h3>
-    <p>Break the project into reusable header, footer, buttons, and cards.</p>
-    <span class="date">Not Done</span>
-    <span class="status backlog">Backlog</span>
-  </div>
+      <div class="right item" role="listitem">
+        <div class="dot">2025</div>
+        <div class="card">
+          <div class="title">Mood Board</div>
+          <div class="desc">Showcase project colors, typography, buttons, cards, and logos.</div>
+          <div class="status done">Done</div>
+        </div>
+      </div>
 
-  <div class="card">
-    <h3>CRUD Functionalities</h3>
-    <p>Implement at least 3 features with create, read, update, delete.</p>
-    <span class="date">Not Done</span>
-    <span class="status backlog">Backlog</span>
-  </div>
+      <div class="left item" role="listitem">
+        <div class="dot">2025</div>
+        <div class="card">
+          <div class="title">Roadmap Page</div>
+          <div class="desc">Outline the development flow with milestones and timeline.</div>
+          <div class="status done">Done</div>
+        </div>
+      </div>
 
-  <div class="card">
-    <h3>Finalize & Merge</h3>
-    <p>Test thoroughly, finalize development, and merge into main branch.</p>
-    <span class="date">Not Done</span>
-    <span class="status backlog">Backlog</span>
-  </div>
-</div>
+      <div class="right item" role="listitem">
+        <div class="dot">Future</div>
+        <div class="card">
+          <div class="title">Componentization</div>
+          <div class="desc">Break the project into reusable header, footer, buttons, and cards.</div>
+          <div class="status backlog">Backlog</div>
+        </div>
+      </div>
 
-<footer>
-  <p>© <?php echo date("Y"); ?> Miltank Tea Shop. All rights reserved.</p>
-  <p>
-    <a href="https://fb.com/EumieDraws">Facebook</a> | 
-    <a href="https://instagram.com/Eumie_Draws">Instagram</a> | 
-    <a href="https://twitter.com/Eumie_Draws">Twitter</a>
-  </p>
-</footer>
+      <div class="left item" role="listitem">
+        <div class="dot">Future</div>
+        <div class="card">
+          <div class="title">CRUD Functionalities</div>
+          <div class="desc">Implement create, read, update, and delete features for core resources.</div>
+          <div class="status backlog">Backlog</div>
+        </div>
+      </div>
+
+      <div class="right item" role="listitem">
+        <div class="dot">Future</div>
+        <div class="card">
+          <div class="title">Finalize &amp; Merge</div>
+          <div class="desc">Test thoroughly, finalize development, and merge into the main branch.</div>
+          <div class="status backlog">Backlog</div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <p>© <?php echo date("Y"); ?> Miltank Tea Shop. All rights reserved.</p>
+    <p>
+      <a href="https://fb.com/EumieDraws" target="_blank" rel="noopener noreferrer">Facebook</a> |
+      <a href="https://instagram.com/Eumie_Draws" target="_blank" rel="noopener noreferrer">Instagram</a> |
+      <a href="https://twitter.com/Eumie_Draws" target="_blank" rel="noopener noreferrer">Twitter</a>
+    </p>
+  </footer>
 
 </body>
+
 </html>

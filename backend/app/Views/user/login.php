@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,29 +20,44 @@
 
     header {
       background: #f6b6c4;
-      color: #ffffff;
-      text-align: center;
-      padding: 1rem;
+      color: #2f2f2f;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
 
-    nav {
-      margin-top: 0.5rem;
+    header h1 {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 1.6rem;
+      font-family: 'Lilita One', cursive;
+      margin: 0;
+    }
+
+    .logo-inline {
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
     }
 
     nav a {
-      margin: 0 0.5rem;
-      padding: 0.4rem 1rem;
+      text-decoration: none;
       background: #4a90e2;
       color: #ffffff;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 4px;
-      transition: 0.2s;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      margin: 0 0.3rem;
+      font-weight: 500;
+      transition: all 0.2s ease-in-out;
     }
 
     nav a:hover {
       background: #2f2f2f;
     }
+
 
     .container {
       flex: 1;
@@ -55,26 +71,28 @@
       background: #ffffff;
       padding: 2rem;
       border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
       width: 100%;
       max-width: 400px;
     }
-    h1{
-              display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.6rem;
-  font-size: 2rem;
-  color: #2f2f2f;
-    font-family: 'Lilita One', cursive;
-}
 
-.logo-inline {
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-  object-fit: cover;
-}
+    h1 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      font-size: 2rem;
+      color: #2f2f2f;
+      font-family: 'Lilita One', cursive;
+    }
+
+    .logo-inline {
+      height: 50px;
+      width: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
     h2 {
       text-align: center;
       margin-bottom: 1.5rem;
@@ -130,6 +148,7 @@
       text-align: center;
       padding: 1rem;
     }
+
     footer a {
       color: #f6b6c4;
       margin: 0 10px;
@@ -137,18 +156,19 @@
     }
   </style>
 </head>
+
 <body>
 
   <header>
     <h1>
-    <img src="https://media.discordapp.net/attachments/810746996457603123/1420623080392364082/MILTANKTEAcir.png?ex=68d611d8&is=68d4c058&hm=c74f56984c57a47a6216299ff4b2b21957292755bbff10ad81858db761efa98f&=&format=webp&quality=lossless" 
-         alt="Miltank Logo" class="logo-inline">
-    Miltank Tea Shop
-  </h1>
+      <img src="/1758800584.685317-nobg.png"
+        alt="Miltank Logo" class="logo-inline">
+      Miltank Tea Shop
+    </h1>
     <nav>
-    <a href="/">Home</a>
-    <a href="/moodboard">Mood Board</a>
-    <a href="/roadmap">Road Map</a>
+      <a href="/">Home</a>
+      <a href="/moodboard">Mood Board</a>
+      <a href="/roadmap">Road Map</a>
 
     </nav>
   </header>
@@ -171,14 +191,15 @@
     </div>
   </div>
 
- <footer>
-  <p>© <?php echo date("Y"); ?> Miltank Tea Shop. All rights reserved.</p>
-  <p>
-    <a href="https://fb.com/EumieDraws">Facebook</a> | 
-    <a href="https://instagram.com/Eumie_Draws">Instagram</a> | 
-    <a href="https://twitter.com/Eumie_Draws">Twitter</a>
-  </p>
-</footer>
+  <footer>
+    <p>© <?php echo date("Y"); ?> Miltank Tea Shop. All rights reserved.</p>
+    <p>
+      <a href="https://fb.com/EumieDraws">Facebook</a> |
+      <a href="https://instagram.com/Eumie_Draws">Instagram</a> |
+      <a href="https://twitter.com/Eumie_Draws">Twitter</a>
+    </p>
+  </footer>
 
 </body>
+
 </html>

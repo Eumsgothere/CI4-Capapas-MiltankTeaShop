@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Lilita+One&display=swap" rel="stylesheet">
   <style>
     /* Reset + Base */
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
       font-family: 'Poppins', sans-serif;
       background: #fcebb7;
@@ -17,8 +23,9 @@
       min-height: 100vh;
     }
 
-    header, footer {
-     background: #f6b6c4;
+    header,
+    footer {
+      background: #f6b6c4;
       color: #2f2f2f;
       text-align: center;
       padding: 1rem;
@@ -26,42 +33,50 @@
 
     header {
       background: #f6b6c4;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      color: #2f2f2f;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
-    header h1 {
-           display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.6rem;
-  font-size: 2rem;
-  color: #2f2f2f;
-    font-family: 'Lilita One', cursive;
-}
 
-.logo-inline {
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-    nav { margin-top: 0.5rem; }
-    nav a {
-      margin: 0 0.5rem;
-      padding: 0.4rem 1rem;
-      background: #4a90e2;
-      color: #fff;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 4px;
-      transition: 0.2s;
+    header h1 {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 1.6rem;
+      font-family: 'Lilita One', cursive;
+      margin: 0;
     }
-    nav a:hover { background: #2f2f2f; }
+
+    .logo-inline {
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    nav a {
+      text-decoration: none;
+      background: #4a90e2;
+      color: #ffffff;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      margin: 0 0.3rem;
+      font-weight: 500;
+      transition: all 0.2s ease-in-out;
+    }
+
+    nav a:hover {
+      background: #2f2f2f;
+    }
 
     section {
       max-width: 1100px;
       margin: 2rem auto;
       padding: 0 2rem;
     }
+
     section h2 {
       text-align: center;
       font-size: 1.8rem;
@@ -77,19 +92,42 @@
       gap: 1rem;
       flex-wrap: wrap;
     }
+
     .swatch {
-      width: 120px; height: 120px;
+      width: 120px;
+      height: 120px;
       border-radius: 12px;
-      display: flex; flex-direction: column; justify-content: center; align-items: center;
-      font-size: 0.8rem; font-weight: 600;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size: 0.8rem;
+      font-weight: 600;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
       border: 3px solid #ddd;
     }
-    .pink { background: #f6b6c4; }
-    .cream { background: #fcebb7; }
-    .blue { background: #4a90e2; color: #fff; }
-    .dark { background: #2f2f2f; color: #fff; }
-    .white { background: #fff; }
+
+    .pink {
+      background: #f6b6c4;
+    }
+
+    .cream {
+      background: #fcebb7;
+    }
+
+    .blue {
+      background: #4a90e2;
+      color: #fff;
+    }
+
+    .dark {
+      background: #2f2f2f;
+      color: #fff;
+    }
+
+    .white {
+      background: #fff;
+    }
 
     /* Typography */
     .typography {
@@ -99,8 +137,18 @@
       flex-wrap: wrap;
       text-align: center;
     }
-    .heading-font { font-family: 'Lilita One', cursive; font-size: 2rem; color: #4a90e2; }
-    .body-font { font-family: 'Poppins', sans-serif; font-size: 1rem; color: #555; }
+
+    .heading-font {
+      font-family: 'Lilita One', cursive;
+      font-size: 2rem;
+      color: #4a90e2;
+    }
+
+    .body-font {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1rem;
+      color: #555;
+    }
 
     /* Buttons */
     .buttons {
@@ -109,6 +157,7 @@
       gap: 1rem;
       flex-wrap: wrap;
     }
+
     .btn {
       padding: 0.7rem 1.5rem;
       border-radius: 8px;
@@ -118,13 +167,41 @@
       transition: 0.3s;
       border: none;
     }
-    .btn-primary { background: #f6b6c4; color: #2f2f2f; }
-    .btn-primary:hover { background: #4a90e2; color: #fff; }
-    .btn-secondary { background: #4a90e2; color: #fff; }
-    .btn-secondary:hover { background: #2f2f2f; }
-    .btn-bordered { background: transparent; border: 2px solid #f6b6c4; color: #2f2f2f; }
-    .btn-bordered:hover { background: #f6b6c4; }
-    .btn-disabled { background: #ddd; color: #999; cursor: not-allowed; }
+
+    .btn-primary {
+      background: #f6b6c4;
+      color: #2f2f2f;
+    }
+
+    .btn-primary:hover {
+      background: #4a90e2;
+      color: #fff;
+    }
+
+    .btn-secondary {
+      background: #4a90e2;
+      color: #fff;
+    }
+
+    .btn-secondary:hover {
+      background: #2f2f2f;
+    }
+
+    .btn-bordered {
+      background: transparent;
+      border: 2px solid #f6b6c4;
+      color: #2f2f2f;
+    }
+
+    .btn-bordered:hover {
+      background: #f6b6c4;
+    }
+
+    .btn-disabled {
+      background: #ddd;
+      color: #999;
+      cursor: not-allowed;
+    }
 
     /* Cards */
     .card-grid {
@@ -132,18 +209,36 @@
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 1.5rem;
     }
+
     .card {
       background: #fff;
       border-radius: 14px;
       border: 2px solid #f6b6c4;
       overflow: hidden;
-      box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
       transition: transform 0.25s ease, box-shadow 0.25s ease;
     }
-    .card:hover { transform: translateY(-8px); box-shadow: 0 10px 18px rgba(0,0,0,0.15); }
-    .card img { width: 100%; height: 200px; object-fit: cover; }
-    .card-content { padding: 1rem; text-align: center; }
-    .card-content h3 { margin-bottom: 0.5rem; font-family: 'Lilita One', cursive; }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 18px rgba(0, 0, 0, 0.15);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .card-content h3 {
+      margin-bottom: 0.5rem;
+      font-family: 'Lilita One', cursive;
+    }
 
     /* Logos */
     .logos {
@@ -152,22 +247,46 @@
       gap: 2rem;
       flex-wrap: wrap;
     }
+
     .logo {
-      width: 120px; height: 120px;
-      display: flex; justify-content: center; align-items: center;
+      width: 120px;
+      height: 120px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       background: #f6b6c4;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
       border-radius: 12px;
       overflow: hidden;
     }
-    .circle { border-radius: 50%; }
-    .logo img { width: 80%; height: auto; }
+
+    .circle {
+      border-radius: 50%;
+    }
+
+    .logo img {
+      width: 80%;
+      height: auto;
+    }
+
+    .page-title {
+      text-align: center;
+      padding: 1rem 0;
+    }
+
+    .page-title h2 {
+      font-family: 'Lilita One', cursive;
+      font-size: 3.5rem;
+      color: #2f2f2f;
+      margin: 0;
+    }
 
     footer {
       background: #2f2f2f;
       color: #fff;
       margin-top: auto;
     }
+
     footer a {
       color: #f6b6c4;
       margin: 0 10px;
@@ -175,20 +294,24 @@
     }
   </style>
 </head>
+
 <body>
 
   <header>
     <h1>
-    <img src="https://media.discordapp.net/attachments/810746996457603123/1420623080392364082/MILTANKTEAcir.png?ex=68d611d8&is=68d4c058&hm=c74f56984c57a47a6216299ff4b2b21957292755bbff10ad81858db761efa98f&=&format=webp&quality=lossless" 
-         alt="Miltank Logo" class="logo-inline">
-    Miltank Tea Shop
-  </h1>
+      <img src="/1758800584.685317-nobg.png" alt="Miltank Logo" class="logo-inline">
+      Miltank Tea Shop
+    </h1>
     <nav>
       <a href="/">Home</a>
-      <a href="/moodboard">Mood Board</a>
       <a href="/roadmap">Road Map</a>
+      <a href="/login">Log in</a>
+
     </nav>
   </header>
+  <div class="page-title">
+    <h2>Mood Board</h2>
+  </div>
 
   <section>
     <h2>Color Palette</h2>
@@ -220,7 +343,7 @@
     <div class="buttons">
       <button class="btn btn-primary">Primary</button>
       <button class="btn btn-secondary">Secondary</button>
-      <button class="btn btn-bordered">Bordered</button>
+      <button class="btn-bordered btn">Bordered</button>
       <button class="btn btn-disabled">Disabled</button>
     </div>
   </section>
@@ -242,22 +365,23 @@
     <h2>Logos</h2>
     <div class="logos">
       <div class="logo circle">
-        <img src="https://media.discordapp.net/attachments/810746996457603123/1420623080392364082/MILTANKTEAcir.png?ex=68d611d8&is=68d4c058&hm=c74f56984c57a47a6216299ff4b2b21957292755bbff10ad81858db761efa98f&=&format=webp&quality=lossless" alt="Miltank Logo">
+        <img src="/1758800584.685317-nobg.png" alt="Miltank Logo">
       </div>
       <div class="logo square">
-        <img src="https://media.discordapp.net/attachments/810746996457603123/1420619634645667901/MILTANKTEA.png?ex=68d60ea2&is=68d4bd22&hm=e1857f50c7c021d67585a0b135e952a4c7314016058bdacda478ecf16209446e&=&format=webp&quality=lossless" alt="Miltank Logo">
+        <img src="/1758800584.685317-2.jpg" alt="Miltank Logo">
       </div>
     </div>
   </section>
 
- <footer>
-  <p>© <?php echo date("Y"); ?> Miltank Tea Shop. All rights reserved.</p>
-  <p>
-    <a href="https://fb.com/EumieDraws">Facebook</a> | 
-    <a href="https://instagram.com/Eumie_Draws">Instagram</a> | 
-    <a href="https://twitter.com/Eumie_Draws">Twitter</a>
-  </p>
-</footer>
+  <footer>
+    <p>© <?php echo date("Y"); ?> Miltank Tea Shop. All rights reserved.</p>
+    <p>
+      <a href="https://fb.com/EumieDraws">Facebook</a> |
+      <a href="https://instagram.com/Eumie_Draws">Instagram</a> |
+      <a href="https://twitter.com/Eumie_Draws">Twitter</a>
+    </p>
+  </footer>
 
 </body>
+
 </html>
