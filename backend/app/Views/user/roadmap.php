@@ -20,46 +20,6 @@
       color: #2f2f2f
     }
 
-    header {
-      background: #f6b6c4;
-      color: #2f2f2f;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
-
-    header h1 {
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-      font-size: 1.6rem;
-      font-family: 'Lilita One', cursive;
-      margin: 0;
-    }
-
-    .logo {
-      height: 50px;
-      border-radius: 50%;
-      object-fit: cover;
-    }
-
-    nav a {
-      text-decoration: none;
-      background: #4a90e2;
-      color: #ffffff;
-      padding: 0.5rem 1rem;
-      border-radius: 6px;
-      margin: 0 0.3rem;
-      font-weight: 500;
-      transition: all 0.2s ease-in-out;
-    }
-
-    nav a:hover {
-      background: #2f2f2f;
-    }
-
     .page-title {
       text-align: center;
       padding: 1rem 0;
@@ -164,21 +124,6 @@
       background: #9e9e9e
     }
 
-    footer {
-      background: #2f2f2f;
-      color: #fff;
-      padding: 16px;
-      text-align: center;
-      margin-top: 32px
-    }
-
-    footer a {
-      color: #f6b6c4;
-      text-decoration: none;
-      margin: 0 8px;
-      font-weight: 600
-    }
-
     @media (max-width:760px) {
       .timeline::before {
         left: 28px;
@@ -207,17 +152,8 @@
 
 <body>
 
-  <header>
-    <h1>
-      <img src="/1758800584.685317-nobg.png" alt="logo" class="logo">
-      Miltank Tea Shop
-    </h1>
-    <nav>
-      <a href="/">Home</a>
-      <a href="/moodboard">Mood Board</a>
-      <a href="/login">Log in</a>
-    </nav>
-  </header>
+  <?= view('components/header'); ?>
+  <?= view('components/status-button'); ?>
 
   <div class="page-title">
     <h2>Road Map</h2>
@@ -228,87 +164,106 @@
 
       <div class="left item" role="listitem">
         <div class="dot">2025</div>
-        <div class="card">
-          <div class="title">Setup Environment</div>
-          <div class="desc">Prepare project files, configure the environment, and initialize version control.</div>
-          <div class="status done">Done</div>
-        </div>
+        <?php
+        $statusButton = renderStatusButton('done', 'Done');
+        echo view('components/card', [
+          'title' => 'Setup Environment',
+          'desc' => 'Prepare project files, configure the environment, and initialize version control.',
+          'statusButton' => $statusButton
+        ]);
+        ?>
       </div>
 
       <div class="right item" role="listitem">
         <div class="dot">2025</div>
-        <div class="card">
-          <div class="title">Landing Page</div>
-          <div class="desc">Design and build the main landing page for the project.</div>
-          <div class="status done">Done</div>
-        </div>
+        <?php
+        $statusButton = renderStatusButton('done', 'Done');
+        echo view('components/card', [
+          'title' => 'Landing Page',
+          'desc' => 'Design and build the main landing page for the project.',
+          'statusButton' => $statusButton
+        ]);
+        ?>
       </div>
 
       <div class="left item" role="listitem">
         <div class="dot">2025</div>
-        <div class="card">
-          <div class="title">Login &amp; Sign Up</div>
-          <div class="desc">Create authentication pages for users (login and signup).</div>
-          <div class="status done">Done</div>
-        </div>
+        <?php
+        $statusButton = renderStatusButton('done', 'Done');
+        echo view('components/card', [
+          'title' => 'Login & Sign Up',
+          'desc' => 'Create authentication pages for users (login and signup).',
+          'statusButton' => $statusButton
+        ]);
+        ?>
       </div>
 
       <div class="right item" role="listitem">
         <div class="dot">2025</div>
-        <div class="card">
-          <div class="title">Mood Board</div>
-          <div class="desc">Showcase project colors, typography, buttons, cards, and logos.</div>
-          <div class="status done">Done</div>
-        </div>
+        <?php
+        $statusButton = renderStatusButton('done', 'Done');
+        echo view('components/card', [
+          'title' => 'Mood Board',
+          'desc' => 'Showcase project colors, typography, buttons, cards, and logos.',
+          'statusButton' => $statusButton
+        ]);
+        ?>
       </div>
 
       <div class="left item" role="listitem">
         <div class="dot">2025</div>
-        <div class="card">
-          <div class="title">Roadmap Page</div>
-          <div class="desc">Outline the development flow with milestones and timeline.</div>
-          <div class="status done">Done</div>
-        </div>
+        <?php
+        $statusButton = renderStatusButton('done', 'Done');
+        echo view('components/card', [
+          'title' => 'Roadmap Page',
+          'desc' => 'Outline the development flow with milestones and timeline.',
+          'statusButton' => $statusButton
+        ]);
+        ?>
       </div>
 
       <div class="right item" role="listitem">
         <div class="dot">Future</div>
-        <div class="card">
-          <div class="title">Componentization</div>
-          <div class="desc">Break the project into reusable header, footer, buttons, and cards.</div>
-          <div class="status backlog">Backlog</div>
-        </div>
+        <?php
+        $statusButton = renderStatusButton('backlog', 'Backlog');
+        echo view('components/card', [
+          'title' => 'Componentization',
+          'desc' => 'Break the project into reusable header, footer, buttons, and cards.',
+          'statusButton' => $statusButton
+        ]);
+        ?>
       </div>
 
       <div class="left item" role="listitem">
         <div class="dot">Future</div>
-        <div class="card">
-          <div class="title">CRUD Functionalities</div>
-          <div class="desc">Implement create, read, update, and delete features for core resources.</div>
-          <div class="status backlog">Backlog</div>
-        </div>
+        <?php
+        $statusButton = renderStatusButton('backlog', 'Backlog');
+        echo view('components/card', [
+          'title' => 'CRUD Functionalities',
+          'desc' => 'Implement create, read, update, and delete features for core resources.',
+          'statusButton' => $statusButton
+        ]);
+        ?>
       </div>
 
       <div class="right item" role="listitem">
         <div class="dot">Future</div>
-        <div class="card">
-          <div class="title">Finalize &amp; Merge</div>
-          <div class="desc">Test thoroughly, finalize development, and merge into the main branch.</div>
-          <div class="status backlog">Backlog</div>
-        </div>
+        <?php
+        $statusButton = renderStatusButton('backlog', 'Backlog');
+        echo view('components/card', [
+          'title' => 'Finalize & Merge',
+          'desc' => 'Test thoroughly, finalize development, and merge into the main branch.',
+          'statusButton' => $statusButton
+        ]);
+        ?>
       </div>
 
     </div>
   </main>
 
-  <footer>
-    <p>© <?php echo date("Y"); ?> Miltank Tea Shop. All rights reserved.</p>
-    <p>
-      <a href="https://fb.com/EumieDraws" target="_blank" rel="noopener noreferrer">Facebook</a> |
-      <a href="https://instagram.com/Eumie_Draws" target="_blank" rel="noopener noreferrer">Instagram</a> |
-      <a href="https://twitter.com/Eumie_Draws" target="_blank" rel="noopener noreferrer">Twitter</a>
-    </p>
-  </footer>
+
+
+  <?= view('components/footer'); ?>
 
 </body>
 

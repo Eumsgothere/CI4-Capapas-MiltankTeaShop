@@ -23,54 +23,6 @@
       min-height: 100vh;
     }
 
-    header,
-    footer {
-      background: #f6b6c4;
-      color: #2f2f2f;
-      text-align: center;
-      padding: 1rem;
-    }
-
-    header {
-      background: #f6b6c4;
-      color: #2f2f2f;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
-
-    header h1 {
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-      font-size: 1.6rem;
-      font-family: 'Lilita One', cursive;
-      margin: 0;
-    }
-
-    .logo-inline {
-      height: 50px;
-      border-radius: 50%;
-      object-fit: cover;
-    }
-
-    nav a {
-      text-decoration: none;
-      background: #4a90e2;
-      color: #ffffff;
-      padding: 0.5rem 1rem;
-      border-radius: 6px;
-      margin: 0 0.3rem;
-      font-weight: 500;
-      transition: all 0.2s ease-in-out;
-    }
-
-    nav a:hover {
-      background: #2f2f2f;
-    }
-
     section {
       max-width: 1100px;
       margin: 2rem auto;
@@ -280,35 +232,12 @@
       color: #2f2f2f;
       margin: 0;
     }
-
-    footer {
-      background: #2f2f2f;
-      color: #fff;
-      margin-top: auto;
-    }
-
-    footer a {
-      color: #f6b6c4;
-      margin: 0 10px;
-      text-decoration: none;
-    }
   </style>
 </head>
 
 <body>
+  <?= view('components/header'); ?>
 
-  <header>
-    <h1>
-      <img src="/1758800584.685317-nobg.png" alt="Miltank Logo" class="logo-inline">
-      Miltank Tea Shop
-    </h1>
-    <nav>
-      <a href="/">Home</a>
-      <a href="/roadmap">Road Map</a>
-      <a href="/login">Log in</a>
-
-    </nav>
-  </header>
   <div class="page-title">
     <h2>Mood Board</h2>
   </div>
@@ -340,25 +269,42 @@
 
   <section>
     <h2>Buttons</h2>
-    <div class="buttons">
-      <button class="btn btn-primary">Primary</button>
-      <button class="btn btn-secondary">Secondary</button>
-      <button class="btn-bordered btn">Bordered</button>
-      <button class="btn btn-disabled">Disabled</button>
+    <div class="buttons" style="display:flex; justify-content:center; gap:1rem; flex-wrap:wrap;">
+      <?= view('components/buttons', [
+        'btnText' => 'Primary Button',
+        'btnLink' => '#',
+        'btnType' => 'primary'
+      ]) ?>
+      <?= view('components/buttons', [
+        'btnText' => 'Secondary Button',
+        'btnLink' => '#',
+        'btnType' => 'secondary'
+      ]) ?>
+      <?= view('components/buttons', [
+        'btnText' => 'Bordered Button',
+        'btnLink' => '#',
+        'btnType' => 'bordered'
+      ]) ?>
+      <?= view('components/buttons', [
+        'btnText' => 'Disabled Button',
+        'btnLink' => '#',
+        'btnType' => 'primary',
+        'btnDisabled' => true
+      ]) ?>
     </div>
   </section>
+
 
   <section>
     <h2>Card Sample</h2>
     <div class="card-grid">
-      <div class="card">
-        <img src="https://assets.epicurious.com/photos/629f98926e3960ec24778116/1:1/w_2560%2Cc_limit/BubbleTea_RECIPE_052522_34811.jpg" alt="Classic Pearl Milk Tea">
-        <div class="card-content">
-          <h3>Classic Pearl Milk Tea</h3>
-          <p>Rich black tea, creamy milk, and chewy pearls.</p>
-        </div>
-      </div>
+      <?= view('components/card', [
+        'imgSrc' => 'https://assets.epicurious.com/photos/629f98926e3960ec24778116/1:1/w_2560%2Cc_limit/BubbleTea_RECIPE_052522_34811.jpg',
+        'title' => 'Classic Pearl Milk Tea',
+        'desc' => 'Rich black tea, creamy milk, and chewy pearls.'
+      ]) ?>
     </div>
+
   </section>
 
   <section>
@@ -373,14 +319,7 @@
     </div>
   </section>
 
-  <footer>
-    <p>© <?php echo date("Y"); ?> Miltank Tea Shop. All rights reserved.</p>
-    <p>
-      <a href="https://fb.com/EumieDraws">Facebook</a> |
-      <a href="https://instagram.com/Eumie_Draws">Instagram</a> |
-      <a href="https://twitter.com/Eumie_Draws">Twitter</a>
-    </p>
-  </footer>
+  <?= view('components/footer'); ?>
 
 </body>
 

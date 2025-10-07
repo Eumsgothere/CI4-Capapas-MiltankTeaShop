@@ -34,46 +34,6 @@
       margin: 0 auto;
     }
 
-    header {
-      background: #f6b6c4;
-      color: #2f2f2f;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
-
-    header h1 {
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-      font-size: 1.6rem;
-      font-family: 'Lilita One', cursive;
-      margin: 0;
-    }
-
-    .logo-inline {
-      height: 50px;
-      border-radius: 50%;
-      object-fit: cover;
-    }
-
-    nav a {
-      text-decoration: none;
-      background: #4a90e2;
-      color: #ffffff;
-      padding: 0.5rem 1rem;
-      border-radius: 6px;
-      margin: 0 0.3rem;
-      font-weight: 500;
-      transition: all 0.2s ease-in-out;
-    }
-
-    nav a:hover {
-      background: #2f2f2f;
-    }
-
     .hero {
       background: #ffffff;
       text-align: center;
@@ -170,18 +130,23 @@
       border-radius: 10px;
     }
 
-    footer {
-      background: #2f2f2f;
-      color: #ffffff;
-      text-align: center;
-      padding: 1.2rem;
-      margin-top: 3rem;
+    .testimonials-section {
+      max-width: 1000px;
+      margin: 4rem auto;
+      padding: 0 1rem;
     }
 
-    footer a {
-      color: #f6b6c4;
-      margin: 0 10px;
-      text-decoration: none;
+    .testimonials-section h2 {
+      text-align: center;
+      color: #2f2f2f;
+      margin-bottom: 2rem;
+      font-size: 2rem;
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
     }
   </style>
 </head>
@@ -189,20 +154,10 @@
 <body>
 
   <div class="banner">
-    <img src="/banner.png" alt="Miltank Tea Shop Banner">
+    <img src="/banners.png" alt="Miltank Tea Shop Banner">
   </div>
 
-  <header>
-    <h1>
-      <img src="/1758800584.685317-nobg.png" alt="Miltank Logo" class="logo-inline">
-      Miltank Tea Shop
-    </h1>
-    <nav>
-      <a href="/moodboard">Mood Board</a>
-      <a href="/roadmap">Road Map</a>
-      <a href="/login">Login</a>
-    </nav>
-  </header>
+  <?= view('components/header'); ?>
 
   <section class="hero">
     <h2>🧋 Refreshing Happiness in Every Sip 🧋</h2>
@@ -214,29 +169,33 @@
   <section>
     <h2>Our Best Sellers</h2>
     <div class="best-sellers">
-      <div class="card">
-        <img src="https://assets.epicurious.com/photos/629f98926e3960ec24778116/1:1/w_2560%2Cc_limit/BubbleTea_RECIPE_052522_34811.jpg" alt="Classic Pearl Milk Tea">
-        <div class="card-content">
-          <h3>Classic Pearl Milk Tea</h3>
-          <p>Rich black tea, creamy milk, and chewy pearls.</p>
-        </div>
-      </div>
-      <div class="card">
-        <img src="https://www.inkatrinaskitchen.com/wp-content/uploads/2020/05/Strawberry-Bubble-Tea-24-wm-600-500x500.jpg" alt="Strawberry Milk Tea">
-        <div class="card-content">
-          <h3>Strawberry Milk Tea</h3>
-          <p>Refreshing pink tea with real strawberry flavor.</p>
-        </div>
-      </div>
-      <div class="card">
-        <img src="https://feelgoodfoodie.net/wp-content/uploads/2023/08/Matcha-Latte-TIMG.jpg" alt="Matcha Latte">
-        <div class="card-content">
-          <h3>Matcha Latte</h3>
-          <p>Earthy matcha balanced with creamy sweetness.</p>
-        </div>
-      </div>
+      <?= view('components/card', [
+        'imgSrc' => 'https://assets.epicurious.com/photos/629f98926e3960ec24778116/1:1/w_2560%2Cc_limit/BubbleTea_RECIPE_052522_34811.jpg',
+        'title' => 'Classic Pearl Milk Tea',
+        'desc' => 'Rich black tea, creamy milk, and chewy pearls.'
+      ]) ?>
+
+      <?= view('components/card', [
+        'imgSrc' => 'https://www.inkatrinaskitchen.com/wp-content/uploads/2020/05/Strawberry-Bubble-Tea-24-wm-600-500x500.jpg',
+        'title' => 'Strawberry Milk Tea',
+        'desc' => 'Refreshing pink tea with real strawberry flavor.'
+      ]) ?>
+
+      <?= view('components/card', [
+        'imgSrc' => 'https://feelgoodfoodie.net/wp-content/uploads/2023/08/Matcha-Latte-TIMG.jpg',
+        'title' => 'Matcha Latte',
+        'desc' => 'Earthy matcha balanced with creamy sweetness.'
+      ]) ?>
     </div>
   </section>
+
+  <div style="text-align:center; margin-top:1.5rem;">
+    <?= view('components/button', [
+      'btnText' => 'See Full Menu',
+      'btnType' => 'primary',
+      'btnLink' => '/menu'
+    ]) ?>
+  </div>
 
   <section class="about-us">
     <h2>About Us</h2>
@@ -254,31 +213,15 @@
       </div>
     </div>
   </section>
-
-  <section>
-    <h2>What Our Customers Say</h2>
-    <div class="testimonials">
-      <div class="card">
-        <div class="card-content">
-          <p>"Best milk tea in town! The pearls are so chewy and fresh. ⭐⭐⭐⭐⭐"</p>
-          <strong>- Alex</strong>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-content">
-          <p>"I love the Pokémon theme! So cute and unique. ⭐⭐⭐⭐⭐"</p>
-          <strong>- Jamie</strong>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-content">
-          <p>"Their Matcha Latte is my absolute favorite. ⭐⭐⭐⭐⭐"</p>
-          <strong>- Taylor</strong>
-        </div>
-      </div>
+  <?= view('components/cta'); ?>
+  <section class="testimonials-section">
+    <h2>What Our Fans Say</h2>
+    <div class="testimonials-grid">
+      <?= view('components/cardtestimonial', ['testimonial' => 'Miltank Milk Tea is my favorite! So creamy and delicious!', 'author' => 'Ash K.']) ?>
+      <?= view('components/cardtestimonial', ['testimonial' => 'The Berry teas are refreshing and fun, just like Pokémon!', 'author' => 'Misty W.']) ?>
+      <?= view('components/cardtestimonial', ['testimonial' => 'Legendary Specials are legendary! Truly magical flavors.', 'author' => 'Brock P.']) ?>
     </div>
   </section>
-
   <section>
     <h2>Contact Us</h2>
     <p style="text-align:center;">📍 123 Milk Street, Pokétown</p>
@@ -286,14 +229,7 @@
     <p style="text-align:center;">✉️ contact@miltankteashop.com</p>
   </section>
 
-  <footer>
-    <p>© <?php echo date("Y"); ?> Miltank Tea Shop. All rights reserved.</p>
-    <p>
-      <a href="https://fb.com/EumieDraws">Facebook</a> |
-      <a href="https://instagram.com/Eumie_Draws">Instagram</a> |
-      <a href="https://twitter.com/Eumie_Draws">Twitter</a>
-    </p>
-  </footer>
+  <?= view('components/footer'); ?>
 </body>
 
 </html>

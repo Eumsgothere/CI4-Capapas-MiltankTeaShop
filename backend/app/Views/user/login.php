@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login - Miltank Tea Shop</title>
+  <title>Miltank Tea Shop - Login</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Lilita+One&display=swap" rel="stylesheet">
 
   <style>
@@ -17,47 +17,6 @@
       flex-direction: column;
       min-height: 100vh;
     }
-
-    header {
-      background: #f6b6c4;
-      color: #2f2f2f;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
-
-    header h1 {
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-      font-size: 1.6rem;
-      font-family: 'Lilita One', cursive;
-      margin: 0;
-    }
-
-    .logo-inline {
-      height: 50px;
-      border-radius: 50%;
-      object-fit: cover;
-    }
-
-    nav a {
-      text-decoration: none;
-      background: #4a90e2;
-      color: #ffffff;
-      padding: 0.5rem 1rem;
-      border-radius: 6px;
-      margin: 0 0.3rem;
-      font-weight: 500;
-      transition: all 0.2s ease-in-out;
-    }
-
-    nav a:hover {
-      background: #2f2f2f;
-    }
-
 
     .container {
       flex: 1;
@@ -141,37 +100,11 @@
       text-decoration: none;
       font-weight: bold;
     }
-
-    footer {
-      background: #2f2f2f;
-      color: #ffffff;
-      text-align: center;
-      padding: 1rem;
-    }
-
-    footer a {
-      color: #f6b6c4;
-      margin: 0 10px;
-      text-decoration: none;
-    }
   </style>
 </head>
 
 <body>
-
-  <header>
-    <h1>
-      <img src="/1758800584.685317-nobg.png"
-        alt="Miltank Logo" class="logo-inline">
-      Miltank Tea Shop
-    </h1>
-    <nav>
-      <a href="/">Home</a>
-      <a href="/moodboard">Mood Board</a>
-      <a href="/roadmap">Road Map</a>
-
-    </nav>
-  </header>
+  <?= view('components/header'); ?>
 
   <div class="container">
     <div class="card">
@@ -191,14 +124,7 @@
     </div>
   </div>
 
-  <footer>
-    <p>© <?php echo date("Y"); ?> Miltank Tea Shop. All rights reserved.</p>
-    <p>
-      <a href="https://fb.com/EumieDraws">Facebook</a> |
-      <a href="https://instagram.com/Eumie_Draws">Instagram</a> |
-      <a href="https://twitter.com/Eumie_Draws">Twitter</a>
-    </p>
-  </footer>
+  <?= view('components/footer'); ?>
 
 </body>
 
