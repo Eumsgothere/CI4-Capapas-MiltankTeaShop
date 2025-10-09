@@ -55,16 +55,23 @@
 
 ## Overview
 
-Miltank Tea Shop is an online milk tea ordering system created using the CodeIgniter 4 that is meant to demonstrate an interactive and appealing visual shopping experience over the internet. It has a warm pastel theme that is based on the Miltank mascot and sections of browsing, ordering, and user account management. Purpose: Have a convenient online milk tea store where people can order their drinks online.
+Miltank Tea Shop is an online milk tea ordering system created using the CodeIgniter 4 that is meant to demonstrate an interactive and appealing visual shopping experience over the internet. 
+It has a warm pastel theme that is based on the Miltank mascot and sections of browsing, ordering, and user account management. 
+Purpose: Have a convenient online milk tea store where people can order their drinks online.
+Audience: consists of small business owners and developers who are learning how to develop a CRUD-based e-commerce site using CodeIgniter 4.
 ### Key Components
 
 These are **sample modules** included (or suggested) for learning how to add features:
 
-| Component                 | Purpose                                                             | Notes                                                   |
-| ------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------- |
-| **Auth (Sample)**         | Basic login/logout and role check (admin/user).                     | Uses CI4 sessions + MySQL `users` table.                |
-| **CRUD Module**           | Example entity (`Posts` or `Tasks`) with create/read/update/delete. | Demonstrates Controller → Service → Repository pattern. |
-| **Scheduler (Sample)**    | Simple to-do list with due dates.                                   | Shows how to extend with new tables and services.       |
+| Component                               | Purpose                                                                              |Notes                                          |
+| ----------------------------------------- | --------------------------------------------------------------------------------------- | ----------------------------------------------- |
+|User CRUD (Sign Up / Sign In / Profile)  | Customers can create accounts, log in securely, and manage their profiles.           |Uses session-based authentication.             |
+|Product CRUD (Milk Tea Menu Management)  | Admins can add, edit, or remove milk tea items, toppings, and prices from the menu.  |Reflects updates dynamically on the Menu page. |
+|Order CRUD (Customer Orders).            | Customers can place orders and view their history; admins can update order statuses. |Supports checkout and order tracking.          |
+|Menu Page.                               | Displays featured drinks and best sellers in a card layout.                          |Pastel theme with hover animations.            |
+|Road Map Page.                           | Timeline view of milestones and progress updates.                                    |Uses styled cards for each project goal.       |
+|Mood Board Page.                         | Showcases color palette, fonts, and component styles.                                |Helps maintain design consistency.             |
+
 
  <!-- ! Start simple. Use these modules as **learning samples**; extend or replace them based on your project’s needs. -->
 
@@ -84,11 +91,7 @@ These are **sample modules** included (or suggested) for learning how to add fea
 
 #### Databases
 
-![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge\&logo=mysql\&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge\&logo=postgresql\&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge\&logo=mongodb\&logoColor=white)
-![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge\&logo=firebase\&logoColor=black)
-
+none yet :/
 <!-- ! Keep only the used technology -->
 
 ---
