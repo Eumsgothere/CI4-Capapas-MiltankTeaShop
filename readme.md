@@ -97,8 +97,6 @@ Audience: consists of small business owners and developers who are learning how 
 
 ![Uiverse](https://img.shields.io/badge/Uiverse-UI_Components-blueviolet?style=for-the-badge)
 
-Uiverse is a collection of customizable UI elements built with HTML and CSS, used to enhance the visual design of the Miltank Tea Shop website.
-
 #### Databases
 
 none yet :/ kasi wala pa
