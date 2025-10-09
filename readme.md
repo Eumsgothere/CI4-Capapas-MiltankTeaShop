@@ -93,6 +93,12 @@ Audience: consists of small business owners and developers who are learning how 
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge\&logo=tailwindcss\&logoColor=white)
 ![CodeIgniter](https://img.shields.io/badge/CodeIgniter-EF4223?style=for-the-badge\&logo=codeigniter\&logoColor=white)
 
+#### UI Library
+
+![Uiverse](https://img.shields.io/badge/Uiverse-UI_Components-blueviolet?style=for-the-badge)
+
+Uiverse is a collection of customizable UI elements built with HTML and CSS, used to enhance the visual design of the Miltank Tea Shop website.
+
 #### Databases
 
 none yet :/ kasi wala pa
