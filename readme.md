@@ -56,12 +56,16 @@
 ## Overview
 
 Miltank Tea Shop is an online milk tea ordering system created using the CodeIgniter 4 that is meant to demonstrate an interactive and appealing visual shopping experience over the internet. 
+
 It has a warm pastel theme that is based on the Miltank mascot and sections of browsing, ordering, and user account management. 
+
 Purpose: Have a convenient online milk tea store where people can order their drinks online.
+
 Audience: consists of small business owners and developers who are learning how to develop a CRUD-based e-commerce site using CodeIgniter 4.
+
 ### Key Components
 
-These are **sample modules** included (or suggested) for learning how to add features:
+
 
 | Component                               | Purpose                                                                              |Notes                                          |
 | ----------------------------------------- | --------------------------------------------------------------------------------------- | ----------------------------------------------- |
@@ -91,7 +95,8 @@ These are **sample modules** included (or suggested) for learning how to add fea
 
 #### Databases
 
-none yet :/
+none yet :/ kasi wala pa
+
 <!-- ! Keep only the used technology -->
 
 ---
