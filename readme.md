@@ -95,7 +95,7 @@ Audience: consists of small business owners and developers who are learning how 
 
 #### UI Library
 
-![Uiverse](https://img.shields.io/badge/Uiverse-UI_Components-blueviolet?style=for-the-badge)
+![Uiverse](![Uiverse](https://img.shields.io/badge/Uiverse-blueviolet?style=for-the-badge)style=for-the-badge)
 
 #### Databases
 
