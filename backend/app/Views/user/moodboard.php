@@ -1,170 +1,242 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Miltank Moodboard</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@700&display=swap" rel="stylesheet">
-    <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: #eeeeee;
-      color: #2f2f2f;
+  <title>Miltank Tea Shop - Mood Board</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Lilita+One&display=swap" rel="stylesheet">
+  <style>
+    /* Reset + Base */
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
 
-    h2 {
-      font-family: 'Roboto', sans-serif;
-      text-align: center;
-      margin-bottom: 1rem;
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #fcebb7;
       color: #2f2f2f;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
 
-    header {
-      background: #f6b6c4;
-      color: #ffffff;
-      padding: 1rem;
-      text-align: center;
-    }
-
-    header h1 { margin: 0.5rem 0; font-size: 2rem; }
-    header p { margin: 0.5rem 0 1rem; }
-
-    nav a {
-      display: inline-block;
-      margin: 0.3rem;
-      padding: 0.5rem 1rem;
-      background: #4a90e2;
-      color: #fff;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 6px;
-      transition: 0.2s;
-    }
-
-    nav a:hover { background: #2f2f2f; }
-
-    .section {
-      max-width: 900px;
+    section {
+      max-width: 1100px;
       margin: 2rem auto;
-      padding: 1rem;
+      padding: 0 2rem;
+    }
+
+    section h2 {
+      text-align: center;
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+      color: #4a90e2;
+      font-family: 'Lilita One', cursive;
     }
 
     /* Color Palette */
     .palette {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      display: flex;
+      justify-content: center;
       gap: 1rem;
-      margin-top: 1rem;
+      flex-wrap: wrap;
     }
 
-    .color-box {
-      padding: 2rem;
-      border-radius: 8px;
-      text-align: center;
-      font-weight: bold;
-      border: 1px solid #ccc;
+    .swatch {
+      width: 120px;
+      height: 120px;
+      border-radius: 12px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size: 0.8rem;
+      font-weight: 600;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      border: 3px solid #ddd;
     }
 
-    .pink { background: #f6b6c4; color: #2f2f2f; }
-    .cream { background: #fcebb7; color: #2f2f2f; }
-    .dark { background: #2f2f2f; color: #fff; }
-    .blue { background: #4a90e2; color: #fff; }
-    .white { background: #fff; color: #2f2f2f; }
+    .pink {
+      background: #f6b6c4;
+    }
+
+    .cream {
+      background: #fcebb7;
+    }
+
+    .blue {
+      background: #4a90e2;
+      color: #fff;
+    }
+
+    .dark {
+      background: #2f2f2f;
+      color: #fff;
+    }
+
+    .white {
+      background: #fff;
+    }
 
     /* Typography */
     .typography {
       display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      margin-top: 2rem;
+      justify-content: center;
+      gap: 3rem;
+      flex-wrap: wrap;
       text-align: center;
     }
 
-    .font-sample {
-      padding: 1rem;
-      border: 1px solid #ccc;
-      border-radius: 8px;
+    .heading-font {
+      font-family: 'Lilita One', cursive;
+      font-size: 2rem;
+      color: #4a90e2;
+    }
+
+    .body-font {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1rem;
+      color: #555;
     }
 
     /* Buttons */
     .buttons {
       display: flex;
-      flex-wrap: wrap;
       justify-content: center;
       gap: 1rem;
-      margin-top: 2rem;
+      flex-wrap: wrap;
     }
 
     .btn {
-      padding: 0.7rem 1.4rem;
-      border-radius: 6px;
-      font-weight: bold;
+      padding: 0.7rem 1.5rem;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 1rem;
       cursor: pointer;
+      transition: 0.3s;
       border: none;
-      transition: 0.2s;
     }
 
-    .btn-primary { background: #f6b6c4; color: #fff; }
-    .btn-secondary { background: transparent; color: #4a90e2; border: 2px solid #4a90e2; }
-    .btn-disabled { background: #ccc; color: #666; cursor: not-allowed; }
+    .btn-primary {
+      background: #f6b6c4;
+      color: #2f2f2f;
+    }
 
-    .btn:hover:not(.btn-disabled) { opacity: 0.85; }
+    .btn-primary:hover {
+      background: #4a90e2;
+      color: #fff;
+    }
+
+    .btn-secondary {
+      background: #4a90e2;
+      color: #fff;
+    }
+
+    .btn-secondary:hover {
+      background: #2f2f2f;
+    }
+
+    .btn-bordered {
+      background: transparent;
+      border: 2px solid #f6b6c4;
+      color: #2f2f2f;
+    }
+
+    .btn-bordered:hover {
+      background: #f6b6c4;
+    }
+
+    .btn-disabled {
+      background: #ddd;
+      color: #999;
+      cursor: not-allowed;
+    }
 
     /* Cards */
-    .cards {
+    .card-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1rem;
-      margin-top: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
     }
 
     .card {
-      padding: 1rem;
-      border-radius: 10px;
-      text-align: center;
-      transition: transform 0.2s;
+      background: #fff;
+      border-radius: 14px;
+      border: 2px solid #f6b6c4;
+      overflow: hidden;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
     }
 
-    .card-primary { background: #f6b6c4; color: #2f2f2f; }
-    .card-secondary { background: #4a90e2; color: #fff; }
-    .card-neutral { background: #fff; color: #2f2f2f; border: 1px solid #ddd; }
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 18px rgba(0, 0, 0, 0.15);
+    }
 
-    .card:hover { transform: translateY(-5px); }
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .card-content h3 {
+      margin-bottom: 0.5rem;
+      font-family: 'Lilita One', cursive;
+    }
 
     /* Logos */
     .logos {
       display: flex;
       justify-content: center;
       gap: 2rem;
-      margin-top: 2rem;
+      flex-wrap: wrap;
     }
 
-    .logo-circle, .logo-square {
+    .logo {
+      width: 120px;
+      height: 120px;
       display: flex;
-      align-items: center;
       justify-content: center;
-      width: 80px;
-      height: 80px;
-      font-size: 2rem;
-      color: #fff;
-      background: #4a90e2;
+      align-items: center;
+      background: #f6b6c4;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 12px;
+      overflow: hidden;
     }
 
-    .logo-circle { border-radius: 50%; }
-    .logo-square { border-radius: 12px; }
+    .circle {
+      border-radius: 50%;
+    }
 
-    footer {
-      background: #2f2f2f;
-      color: #fff;
+    .logo img {
+      width: 80%;
+      height: auto;
+    }
+
+    .page-title {
       text-align: center;
-      padding: 1rem;
-      margin-top: 3rem;
+      padding: 1rem 0;
+    }
+
+    .page-title h2 {
+      font-family: 'Lilita One', cursive;
+      font-size: 3.5rem;
+      color: #2f2f2f;
+      margin: 0;
     }
   </style>
 </head>
+
 <body>
+  <?= view('components/header'); ?>
 
   <header>
     <h1>🐄 Miltank Moodboard</h1>
@@ -187,53 +259,85 @@
     </div>
   </div>
 
-<div class="section">
-  <h2>📦 Card Samples</h2>
-  <div class="cards">
-    <div class="card card-primary">
-      <h3>Card Title</h3>
-      <p>Sample text inside a colorful primary card.</p>
+  <section>
+    <h2>Color Palette</h2>
+    <div class="palette">
+      <div class="swatch pink">#f6b6c4<br>Pink</div>
+      <div class="swatch cream">#fcebb7<br>Cream</div>
+      <div class="swatch blue">#4a90e2<br>Blue</div>
+      <div class="swatch dark">#2f2f2f<br>Dark</div>
+      <div class="swatch white">#ffffff<br>White</div>
     </div>
-    <div class="card card-secondary">
-      <h3>Highlight Card</h3>
-      <p>Secondary card with deeper shadow and bold background.</p>
-    </div>
-    <div class="card card-neutral">
-      <h3>Minimal Card</h3>
-      <p>Neutral card with white background and subtle border.</p>
-    </div>
-  </div>
-</div>
-  <div class="section">
-    <h2>🔤 Typography</h2>
+  </section>
+
+  <section>
+    <h2>Typography</h2>
     <div class="typography">
-      <div class="font-sample" style="font-family:'Poppins', sans-serif;">Poppins Sample Text: The quick brown fox jumps over the lazy dog.</div>
-      <div class="font-sample" style="font-family:'Roboto', sans-serif;">Roboto Sample Text: The quick brown fox jumps over the lazy dog.</div>
+      <div>
+        <h3>Heading Font</h3>
+        <p class="heading-font">Aa Bb Cc - Lilita One</p>
+      </div>
+      <div>
+        <h3>Body Font</h3>
+        <p class="body-font">Aa Bb Cc - Poppins</p>
+      </div>
     </div>
-  </div>
+  </section>
 
-  <div class="section">
-    <h2>🔘 Buttons</h2>
-    <div class="buttons">
-      <button class="btn btn-primary">Primary</button>
-      <button class="btn btn-secondary">Secondary</button>
-      <button class="btn btn-disabled" disabled>Disabled</button>
+  <section>
+    <h2>Buttons</h2>
+    <div class="buttons" style="display:flex; justify-content:center; gap:1rem; flex-wrap:wrap;">
+      <?= view('components/buttons', [
+        'btnText' => 'Primary Button',
+        'btnLink' => '#',
+        'btnType' => 'primary'
+      ]) ?>
+      <?= view('components/buttons', [
+        'btnText' => 'Secondary Button',
+        'btnLink' => '#',
+        'btnType' => 'secondary'
+      ]) ?>
+      <?= view('components/buttons', [
+        'btnText' => 'Bordered Button',
+        'btnLink' => '#',
+        'btnType' => 'bordered'
+      ]) ?>
+      <?= view('components/buttons', [
+        'btnText' => 'Disabled Button',
+        'btnLink' => '#',
+        'btnType' => 'primary',
+        'btnDisabled' => true
+      ]) ?>
     </div>
-  </div>
+  </section>
 
 
+  <section>
+    <h2>Card Sample</h2>
+    <div class="card-grid">
+      <?= view('components/card', [
+        'imgSrc' => 'https://assets.epicurious.com/photos/629f98926e3960ec24778116/1:1/w_2560%2Cc_limit/BubbleTea_RECIPE_052522_34811.jpg',
+        'title' => 'Classic Pearl Milk Tea',
+        'desc' => 'Rich black tea, creamy milk, and chewy pearls.'
+      ]) ?>
+    </div>
 
-  <div class="section">
-    <h2>🔲 Logos</h2>
+  </section>
+
+  <section>
+    <h2>Logos</h2>
     <div class="logos">
-      <div class="logo-circle">🐄</div>
-      <div class="logo-square">🐄</div>
+      <div class="logo circle">
+        <img src="/1758800584.685317-nobg.png" alt="Miltank Logo">
+      </div>
+      <div class="logo square">
+        <img src="/1758800584.685317-2.jpg" alt="Miltank Logo">
+      </div>
     </div>
-  </div>
+  </section>
 
-  <footer>
-    <p>© 2025 Miltank Tea Shop — Moodboard</p>
-  </footer>
+  <?= view('components/footer'); ?>
 
 </body>
+
 </html>
