@@ -238,8 +238,25 @@
 <body>
   <?= view('components/header'); ?>
 
-  <div class="page-title">
-    <h2>Mood Board</h2>
+  <header>
+    <h1>🐄 Miltank Moodboard</h1>
+    <p>Official Brand Guide for Colors, Buttons, Typography & UI Elements</p>
+    <nav>
+         <a href="/">Home</a>
+         <a href="/login">Log in</a>
+         <a href="/roadmap">Road Map</a>
+    </nav>
+  </header>
+
+  <div class="section">
+    <h2>🎨 Color Palette</h2>
+    <div class="palette">
+      <div class="color-box pink">Pink<br>#f6b6c4</div>
+      <div class="color-box cream">Cream<br>#fcebb7</div>
+      <div class="color-box dark">Dark<br>#2f2f2f</div>
+      <div class="color-box blue">Blue<br>#4a90e2</div>
+      <div class="color-box white">White<br>#ffffff</div>
+    </div>
   </div>
 
   <section>
